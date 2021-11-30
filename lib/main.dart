@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testfortext/widgets/categories.dart';
+import 'package:testfortext/widgets/featured_Products.dart';
 import 'widgets/cutom_text.dart';
 
 void main() {
@@ -100,62 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   ///////////////
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 220,
-                      child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 8,
-                          itemBuilder: (_, index) {
-                            return Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                height: 220,
-                                width: 200,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white,
-                                  //borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Column(
-                                  children: <Widget>[
-                                    Image.asset(
-                                      "${categoriesList[index].image}",
-                                      height: 150,
-                                      width: 150,
-                                      fit: BoxFit.contain,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: CustomText(
-                                              text:
-                                                  "${categoriesList[index].name}"),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.only(right: 8),
-                                          child: Icon(
-                                            Icons.favorite_border,
-                                            size: 18,
-                                            color: Colors.red,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    // Image.asset(
-                                    //   'assets/2.jpg',
-                                    //   height: 140,
-                                    // ),
-                                  ],
-                                ),
-                              ),
-                            );
-                          }),
-                    ),
-                  )
+                  Featured(),
                 ],
               ),
             ),
